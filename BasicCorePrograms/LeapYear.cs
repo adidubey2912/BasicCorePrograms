@@ -10,14 +10,23 @@ namespace BasicCorePrograms
     {
         public static void CheckLeapYear(int Year)
         {
-            if(Year%4 == 0)
+            string Y = Convert.ToString(Year);
+            if(Y.Length == 4)
             {
-                Console.WriteLine("{0} tear is Leap Year.", Year);
+                if (Year % 4 == 0)
+                {
+                    Console.WriteLine("{0} tear is Leap Year.", Year);
+                }
+                else
+                {
+                    Console.WriteLine("{0} tear is not Leap Year.", Year);
+                }
             }
             else
             {
-                Console.WriteLine("{0} tear is not Leap Year.", Year);
+                Console.WriteLine("Enter only 4 digit number.");
             }
+            
         }
     }
 }
