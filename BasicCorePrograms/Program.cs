@@ -11,7 +11,7 @@ namespace BasicCorePrograms
         static void Main(string[] args)
         {
             Console.WriteLine("Please choose any one program from below options");
-            Console.WriteLine("1. Flip Coin\n2. Check Leap Year");
+            Console.WriteLine("1. Flip Coin\n2. Check Leap Year\n3. Power of 2");
             int choose = Convert.ToInt32(Console.ReadLine());
             switch (choose)
             {

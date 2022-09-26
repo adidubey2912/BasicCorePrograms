@@ -10,27 +10,27 @@ namespace BasicCorePrograms
     {
         public static void HeadTail(int Count)
         {
-            double Head = 0;
-            double Tail = 0;
+            int Head = 0;
+            int Tail = 0;
             double HPercent = 0;
             double TPercent = 0;
 
             Random random = new Random();
             for (int i = 1; i <= Count; i++)
             {
-                int Coin = random.Next(0, 2);
-                if(Coin == 0)
+                double Coin = random.NextDouble();
+                if(Coin<0.5)
                 {
                     Head += 1;
-                    HPercent = (Head/Count)*100;
                 }
                 else
                 {
                     Tail += 1;
-                    TPercent = (Tail/Count)*100;
                 }
 
             }
+            HPercent = (Head*100 / Count);
+            TPercent = (Tail*100 / Count);
             Console.WriteLine("Head percent is : {0}.", HPercent);
             Console.WriteLine("Tail percent is : {0}.", TPercent);
         }
