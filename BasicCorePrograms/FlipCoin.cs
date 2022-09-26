@@ -10,8 +10,10 @@ namespace BasicCorePrograms
     {
         public static void HeadTail(int Count)
         {
-            int Head = 0, Tail = 0;
-            int HPercent = 0, TPercent = 0;
+            double Head = 0;
+            double Tail = 0;
+            double HPercent = 0;
+            double TPercent = 0;
 
             Random random = new Random();
             for (int i = 1; i <= Count; i++)
@@ -19,12 +21,12 @@ namespace BasicCorePrograms
                 int Coin = random.Next(0, 2);
                 if(Coin == 0)
                 {
-                    Head = Head + 1;
+                    Head += 1;
                     HPercent = (Head/Count)*100;
                 }
                 else
                 {
-                    Tail = Tail + 1;
+                    Tail += 1;
                     TPercent = (Tail/Count)*100;
                 }
 
